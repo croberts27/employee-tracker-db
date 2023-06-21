@@ -1,7 +1,7 @@
 //DEPENDENCIES
 const inquirer = require("inquirer")
 const mysql = require("mysql2")
-const cTable = require('console.table');
+const consoleTable = require('console.table');
 
 // Create a connection to the MySQL database
 const dataBase = mysql.createConnection({
@@ -22,7 +22,24 @@ function displayMenu () {
     inquirer.prompt([
         {
             type: "list",
-            
+            message: "What would you like to do?",
+            name: "choice",
+            choices: [
+                "View All Employees", 
+                "View All Roles",
+                "View All Departments", 
+                "Update Employee",
+                "Add Employee",
+                "Add Role",
+                "Add Department",
+            ]
+
         }
-    ])
+    ]) .then(function(val){
+        switch (val.choice){
+            case 'View All Employees':
+                viewAllEmployees();
+                break;
+        }
+    })
 }
