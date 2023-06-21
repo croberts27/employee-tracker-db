@@ -18,6 +18,8 @@ This project utilizes a command-line application to manage a database of employe
 
 ## Screenshot
 
+(![App Screenshot](image.png))
+
 ## Credits
 - Columbia Coding Bootcamp
 - Stackoverflow
