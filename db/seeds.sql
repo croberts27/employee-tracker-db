@@ -5,12 +5,12 @@ INSERT INTO department (name) VALUES ("Finance");
 INSERT INTO department (name) VALUES ("HR");
 
 -- Populate data into roles table
-INSERT INTO roles (title, salary, department_id) VALUES ('Manager', 100000, 1);
-INSERT INTO roles (title, salary, department_id) VALUES ('Sales Representative', 90000, 1);
-INSERT INTO roles (title, salary, department_id) VALUES ('Marketing Coordinator', 30000, 2);
-INSERT INTO roles (title, salary, department_id) VALUES ("Sales Lead", 100000, 1);
-INSERT INTO roles (title, salary, department_id) VALUES ('Financial Analyst', 45000, 3);
-INSERT INTO roles (title, salary, department_id) VALUES ('HR Specialist', 80000, 4);
+INSERT INTO role (title, salary, department_id) VALUES ('Manager', 100000, 1);
+INSERT INTO role (title, salary, department_id) VALUES ('Sales Representative', 90000, 1);
+INSERT INTO role (title, salary, department_id) VALUES ('Marketing Coordinator', 30000, 2);
+INSERT INTO role (title, salary, department_id) VALUES ("Sales Lead", 100000, 1);
+INSERT INTO role (title, salary, department_id) VALUES ('Financial Analyst', 45000, 3);
+INSERT INTO role (title, salary, department_id) VALUES ('HR Specialist', 80000, 4);
 
 -- Populate data into employees table
 INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUES ('John', 'Doe', null, 1);

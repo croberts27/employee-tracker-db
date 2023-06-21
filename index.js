@@ -6,15 +6,15 @@ const ctable = require('console.table');
 // Create a connection to the MySQL database
 const db = mysql.createConnection({
     host: 'localhost',
-    port: 3001,
-    user: 'root',
-    password: 'Bigmansql123!', // Bigmansql123!
+    port: 3306, //not 3001
+    user: 'root', //root
+    password: 'Bigmansql123!', // my password
     database: 'employee_db' // db name
   });
 
 db.connect((err) => {
     if (err) throw err;
-    console.log('Connected to Employee_db!');
+    console.log('Connected to the Employee Database!');
     displayMenu()
 });
 
@@ -33,7 +33,6 @@ function displayMenu () {
                 "Add Role",
                 "Add Department",
             ]
-
         }
     ]) .then(function(opt){
         switch (opt.choice){
@@ -162,47 +161,49 @@ function updateEmployee(){
                     );
                     console.log('Employee role updated');
                     displayMenu();
-                });
+               });
         });
     });
-
 }
 
-function addEmployee(){
+function addEmployee() {
     inquirer.prompt([
-        {
-          name: "first name",
-          type: "input",
-          message: "Enter first name: "
-        },
-        {
-          name: "last name",
-          type: "input",
-          message: "Enter last name: "
-        },
-        {
-          name: "role",
-          type: "list",
-          message: "Enter role: ",
-          choices: selectRole()
-        },
-        {
-            name: "choice",
-            type: "rawlist",
-            message: "Enter manager name:",
-            choices: selectManager()
-        }
+      {
+        name: "first_name",
+        type: "input",
+        message: "Enter first name: "
+      },
+      {
+        name: "last_name",
+        type: "input",
+        message: "Enter last name: "
+      },
+      {
+        name: "role",
+        type: "list",
+        message: "Enter role: ",
+        choices: selectedRole()
+      },
+      {
+        name: "manager",
+        type: "rawlist",
+        message: "Enter manager name:",
+        choices: selectManager()
+      }
     ]).then(function (val) {
-      var roleId = selectRole().indexOf(val.role) + 1
-      var managerId = selectManager().indexOf(val.choice) + 1
-      db.query("INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUES (?, ?, ?, ?)", [val.firstname, val.lastname, managerId, roleId], function(err){
-          if (err) throw err
-          console.table(val)
-          displayMenu()
-      })
-  })
-
-}
+      var roleId = selectedRole().indexOf(val.role) + 1;
+      var managerId = selectManager().indexOf(val.manager) + 1;
+      db.query(
+        "INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUES (?, ?, ?, ?)",
+        [val.first_name, val.last_name, managerId, roleId],
+        function (err) {
+          if (err) throw err;
+          console.table(val);
+          displayMenu();
+        }
+      );
+    });
+  }  
 
 function addRole (){
     db.query("SELECT role.title AS Title, role.salary AS Salary FROM role",   function(err, res) {
