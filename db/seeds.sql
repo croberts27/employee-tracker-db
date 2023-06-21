@@ -8,7 +8,7 @@ INSERT INTO departments (name) VALUES
     ('HR');
 
 -- Populate roles table
-INSERT INTO roless (title, salary, department_id) VALUES
+INSERT INTO roles (title, salary, department_id) VALUES
     ('Manager', 100000, 1),
     ('Sales Representative', 90000, 2),
     ('Marketing Coordinator', 30000, 3),

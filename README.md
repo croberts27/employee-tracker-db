@@ -14,6 +14,7 @@ This project utilizes a command-line application to manage a database of employe
 - Node.js
 - [MySQL2 NPM](https://www.npmjs.com/package/mysql2)
 - [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
+- [NPM Console Table](https://www.npmjs.com/package/console.table)
 
 ## Screenshot
 
