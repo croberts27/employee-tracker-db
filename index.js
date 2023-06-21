@@ -61,3 +61,31 @@ function displayMenu () {
         }
     })
 }
+
+function viewAllEmployees(){
+
+}
+
+function viewAllRoles(){
+
+}
+
+function viewAllDepartments(){
+
+}
+
+function updateEmployee(){
+
+}
+
+function addEmployee(){
+
+}
+
+function addRole (){
+
+}
+
+function addDepartment(){
+    
+}
