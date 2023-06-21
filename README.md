@@ -7,7 +7,9 @@ This project utilizes a command-line application to manage a database of employe
 ## Table of Contents
   
 - [Installation](#installation)
+- [GIF](#gif)
 - [Credits](#credits)
+- [Questions](#questions)
 
 ## Installation
 
@@ -16,9 +18,9 @@ This project utilizes a command-line application to manage a database of employe
 - [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
 - [NPM Console Table](https://www.npmjs.com/package/console.table)
 
-## Screenshot
+## GIF
 
-(![App Screenshot](image.png))
+![GIF](<images/Untitled_ Jun 21, 2023 5_17 PM.gif>)
 
 ## Credits
 - Columbia Coding Bootcamp
