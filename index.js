@@ -223,8 +223,8 @@ function addRole (){
             db.query(
                 "INSERT INTO role SET ?",
                 {
-                  title: res.Title,
-                  salary: res.Salary,
+                  title: res.title,
+                  salary: res.salary,
                 },
                 function(err) {
                     if (err) throw err
@@ -241,7 +241,7 @@ function addDepartment(){
         {
           name: "name",
           type: "input",
-          message: "Enter dept to add:"
+          message: "Enter department to add:"
         }
     ]).then(function(res) {
         var query = db.query(
