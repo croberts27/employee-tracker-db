@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     database: 'employee_db' // db name
   });
 
-dataBase.connect((err) => {
+db.connect((err) => {
     if (err) throw err;
     console.log('Connected to Employee_db!');
     displayMenu()
@@ -256,5 +256,4 @@ function addDepartment(){
             }
         )
     })
-
 }
