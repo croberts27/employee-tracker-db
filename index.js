@@ -35,10 +35,28 @@ function displayMenu () {
             ]
 
         }
-    ]) .then(function(val){
-        switch (val.choice){
-            case 'View All Employees':
+    ]) .then(function(opt){
+        switch (opt.choice){
+            case "View All Employees":
                 viewAllEmployees();
+                break;
+            case "View All Roles":
+                viewAllRoles();
+                break;
+            case "View All Departments":
+                viewAllDepartments();
+                break;
+            case "Update Employee":
+                updateEmployee();
+                break;
+            case "Add Employee":
+                addEmployee();
+                break;
+            case "Add Role":
+                addRole();
+                break;
+            case "Add Department":
+                addDepartment();
                 break;
         }
     })

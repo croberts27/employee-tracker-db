@@ -8,7 +8,6 @@ This project utilizes a command-line application to manage a database of employe
   
 - [Installation](#installation)
 - [Credits](#credits)
-- [License](#license)
 
 ## Installation
 
@@ -22,9 +21,6 @@ This project utilizes a command-line application to manage a database of employe
 - Columbia Coding Bootcamp
 - Stackoverflow
 - [NPM documentation](https://www.npmjs.com/package/mysql2)
-
-## License
- MIT License ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) (https://opensource.org/licenses/MIT)
 
 ## Questions
 
